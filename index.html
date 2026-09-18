@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="cyanworks 박승원의 브랜딩, 프로젝트, 그래픽 작업 포트폴리오" />
+    <title>cyanworks | a design portfolio page</title>
+    <link rel="stylesheet" href="assets/style.css?v=20260918-22" />
+    <script src="assets/script.js?v=20260918-22" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <header class="site-header">
+      <div class="dock-header is-visible" aria-hidden="false">
+        <nav class="dock-nav" aria-label="메인 비주얼 포트폴리오 섹션">
+          <a class="dock-nav__item" href="#profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M5.5 20c.6-4.2 2.7-6.3 6.5-6.3s5.9 2.1 6.5 6.3" />
+            </svg>
+            <span>프로필</span>
+          </a>
+          <a class="dock-nav__item" href="#branding">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m12 3 8 5-8 5-8-5 8-5Z" />
+              <path d="m4 12 8 5 8-5M4 16l8 5 8-5" />
+            </svg>
+            <span>브랜딩</span>
+          </a>
+          <a class="dock-nav__item" href="#team-projects">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="8" cy="8" r="3" />
+              <circle cx="17" cy="9" r="2.5" />
+              <path d="M2.5 20c.4-4 2.2-6 5.5-6s5.1 2 5.5 6M14 15c3.8-.9 6.3.8 6.7 4.6" />
+            </svg>
+            <span>프로젝트</span>
+          </a>
+          <a class="dock-nav__item" href="#works">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="5" width="16" height="15" rx="2" />
+              <path d="M8 5V3h8v2M8 10h8M8 14h5" />
+            </svg>
+            <span>기타 작업</span>
+          </a>
+          <a class="dock-nav__item" href="#contact">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m4 7 8 6 8-6" />
+            </svg>
+            <span>연락처</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="top-header is-hidden" aria-hidden="true">
+        <a class="site-signature" href="#top" aria-label="처음으로 이동">
+          <img class="site-signature__logo" src="assets/images/logo.svg" alt="" />
+        </a>
+        <nav class="top-nav" aria-label="포트폴리오 섹션">
+          <a href="#profile">프로필</a>
+          <a href="#branding">브랜딩</a>
+          <a href="#team-projects">프로젝트</a>
+          <a href="#works">기타 작업</a>
+          <a href="#contact">연락처</a>
+        </nav>
+        <button class="mobile-menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="mobile-menu-toggle__mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu__nav" aria-label="모바일 포트폴리오 섹션">
+          <a href="#profile" tabindex="-1">프로필</a>
+          <a href="#branding" tabindex="-1">브랜딩</a>
+          <a href="#team-projects" tabindex="-1">프로젝트</a>
+          <a href="#works" tabindex="-1">기타 작업</a>
+          <a href="#contact" tabindex="-1">연락처</a>
+        </nav>
+        <div class="mobile-menu__footer">
+          <a href="mailto:cyanworks@naver.com" tabindex="-1">cyanworks@naver.com</a>
+          <a class="mobile-menu__github" href="https://github.com/" target="_blank" rel="noopener noreferrer" tabindex="-1">GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-label="cyanworks 포트폴리오 소개">
+        <img class="hero__visual" src="assets/images/main-visual.jpg" alt="" />
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero-intro is-active" data-hero-intro aria-hidden="true">
+          <div class="hero-intro__lines">
+            <span class="hero-intro__line">누구에게나</span>
+            <span class="hero-intro__line">맞는</span>
+            <span class="hero-intro__line">디자인을</span>
+            <span class="hero-intro__line">합니다.</span>
+          </div>
+        </div>
+        <h1 class="hero-logo is-visible" data-hero-logo>
+          <span class="visually-hidden">cyanworks 디자인 포트폴리오</span>
+          <svg class="hero-logo__svg" viewBox="0 0 1047.59 173" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="heroLiquidGradient" x1="0" y1="0" x2="1047.59" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#f1feff" stop-opacity=".62" />
+                <stop offset="30%" stop-color="#dff8fa" stop-opacity=".42" />
+                <stop offset="45%" stop-color="#e5fafb" stop-opacity=".44" />
+                <stop offset="65%" stop-color="#c8f0f3" stop-opacity=".36" />
+                <stop offset="100%" stop-color="#effdfe" stop-opacity=".58" />
+              </linearGradient>
+              <g id="heroLogoPaths">
+                <path d="M686.17,0C652.05,0,624.39,27.66,624.39,61.79s27.66,61.79,61.79,61.79,61.79-27.66,61.79-61.79S720.3,0,686.17,0ZM686.17,98.54c-20.3,0-36.75-16.45-36.75-36.75s16.45-36.75,36.75-36.75,36.75,16.45,36.75,36.75-16.45,36.75-36.75,36.75Z" />
+                <path d="M345.15,61.79c0-34.12-27.66-61.79-61.79-61.79s-61.79,27.66-61.79,61.79,27.66,61.79,61.79,61.79c14.5,0,27.82-5.01,38.36-13.37,3.21,7.84,10.91,13.37,19.91,13.37,1.94,0,3.52-1.57,3.52-3.52v-57.38c0-.06-.02-.12-.02-.18,0-.24.02-.47.02-.71ZM283.36,98.54c-20.3,0-36.75-16.45-36.75-36.75s16.45-36.75,36.75-36.75,36.75,16.45,36.75,36.75-16.45,36.75-36.75,36.75Z" />
+                <path d="M479.07,61.79c0-34.12-27.66-61.79-61.79-61.79-14.5,0-27.82,5.01-38.36,13.37-3.21-7.84-10.91-13.37-19.91-13.37h0c-1.94,0-3.52,1.57-3.52,3.52v116.54c0,1.94,1.57,3.52,3.52,3.52h18c1.94,0,3.52-1.57,3.52-3.52v-58.27c0-20.3,16.45-36.75,36.75-36.75s36.75,16.45,36.75,36.75v58.27c0,1.94,1.57,3.52,3.52,3.52h18c1.94,0,3.52-1.57,3.52-3.52,0,0,0-57.32,0-58.27Z" />
+                <path d="M818.25.06c-12.68.57-24.35,4.98-33.91,12.07V3.52C784.34,1.57,782.76,0,780.82,0h-18c-1.94,0-3.52,1.57-3.52,3.52v116.54c0,1.94,1.57,3.52,3.52,3.52h18c1.94,0,3.52-1.57,3.52-3.52v-58.27c0-17.25,11.88-31.72,27.91-35.68,5.24-1.29,8.84-6.12,8.84-11.52V2.77c0-1.54-1.3-2.78-2.84-2.71Z" />
+                <path d="M80.13,93.63c-6.04,3.49-13.17,5.31-20.76,4.82-18.2-1.16-32.99-15.87-34.24-34.07-1.48-21.47,15.5-39.36,36.66-39.36,6.61,0,12.82,1.75,18.18,4.81,8.14,4.64,18.32,3.53,24.95-3.1l2.08-2.08c1.33-1.33,1.39-3.48.11-4.86C95.53,7.31,78.85-.4,60.38.02,26.59.77-.59,29.13,0,62.91c.6,33.6,28.03,60.66,61.78,60.66,17.91,0,34.04-7.63,45.33-19.81,1.28-1.38,1.21-3.53-.12-4.86l-2.09-2.09c-6.58-6.57-16.73-7.84-24.78-3.19Z" />
+                <path d="M202.37,13.65l-27.67,75.06-31.7-75.89C139.76,5.05,132.17,0,123.76,0h-7.97C113.28,0,111.58,2.55,112.55,4.87l49.44,118.34-16.61,45.06c-.85,2.29.85,4.73,3.3,4.73h7.1c8.74,0,16.55-5.45,19.57-13.65L232.34,4.73C233.19,2.44,231.49,0,229.04,0h-7.1c-8.74,0-16.55,5.45-19.57,13.65Z" />
+                <path d="M948.64,0h-14.43c-6.47,0-12.59,2.95-16.62,8l-60.13,75.41V3.54C857.46,1.59,855.88,0,853.92,0h-17.95c-1.96,0-3.54,1.59-3.54,3.54v116.49c0,1.96,1.59,3.54,3.54,3.54h10.57c6.9,0,13.43-3.14,17.73-8.54l32.83-41.17,23.54,39.36c3.84,6.42,10.77,10.35,18.25,10.35h10.87c2.75,0,4.45-3,3.04-5.36l-39.02-65.25,37.64-47.2C953.26,3.43,951.61,0,948.64,0Z" />
+                <path d="M998.69,123.57s-.08,0-.12,0c-20.72-.23-38.94-13.91-47.71-25.92-1.19-1.63-.81-3.92.86-5.05l2.06-1.39c7.46-5.05,17.75-5.42,24.54.51s13.11,7.46,20.44,7.56c15.55-.02,25.25-8.02,25.36-12.38.1-4.23.27-11.31-26.24-15.47-.11-.02-.23-.04-.34-.06-16.26-3.06-46.52-8.76-48.36-31.68-.83-9.43,1.63-26.71,27.37-35.72,21.81-8.72,51.06-2.62,68.47,13.88,1.44,1.36,1.42,3.66.01,5.06l-2.01,1.99c-6.32,6.25-15.88,7.94-23.91,4.14-10.79-5.09-24.38-6.37-34.26-2.34-.19.08-.39.15-.59.22-12.1,4.18-11.88,8.61-11.71,10.58.82,1.32,5.25,5.45,29.03,9.94,12.97,2.04,46.77,7.5,46,40.06-.48,20.23-21.95,36.08-48.88,36.08ZM972.55,37.58h0s0,0,0,0Z" />
+                <path d="M600.55,15.3l-18.6,63.65-13.57-46.42c-2.17-7.42-8.97-12.52-16.7-12.52h0c-7.73,0-14.53,5.1-16.7,12.52l-13.57,46.42-18.6-63.65C500.17,6.23,491.85,0,482.41,0h-5.42c-2.36,0-4.06,2.27-3.4,4.54l31.13,106.52c2.17,7.42,8.97,12.52,16.7,12.52h0c7.73,0,14.53-5.1,16.7-12.52l13.57-46.42,13.57,46.42c2.17,7.42,8.97,12.52,16.7,12.52h0c7.73,0,14.53-5.1,16.7-12.52l31.13-106.52C630.44,2.27,628.74,0,626.38,0h-5.42c-9.44,0-17.76,6.23-20.41,15.3Z" />
+              </g>
+            </defs>
+            <use class="hero-logo__solid" href="#heroLogoPaths" fill="#073f43" />
+            <use class="hero-logo__glass-glow" href="#heroLogoPaths" fill="none" stroke="#d9fbfd" stroke-opacity=".42" stroke-width="3" vector-effect="non-scaling-stroke" />
+            <use class="hero-logo__liquid" href="#heroLogoPaths" fill="url(#heroLiquidGradient)" stroke="#f5ffff" stroke-opacity=".62" stroke-width="1" vector-effect="non-scaling-stroke" />
+            <use class="hero-logo__glass-edge" href="#heroLogoPaths" fill="none" stroke="#ffffff" stroke-opacity=".5" stroke-width="1.6" vector-effect="non-scaling-stroke" />
+          </svg>
+        </h1>
+        <a class="scroll-cue" href="#profile">
+          <span>Scroll</span>
+          <span class="scroll-cue__arrow" aria-hidden="true">v</span>
+        </a>
+      </section>
+
+      <div class="portfolio-sections">
+        <section class="profile-section" id="profile" aria-labelledby="profile-title">
+          <div class="profile-layout">
+            <article class="profile-card">
+              <div class="profile-controls">
+                <span class="glass-control glass-control--label">Profile</span>
+                <a class="glass-control glass-control--arrow" href="#branding" aria-label="다음 섹션인 브랜딩으로 이동">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </a>
+              </div>
+              <div class="profile-card__body">
+                <div class="profile-avatar" aria-label="프로필 이미지 자리">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4.5 21c.5-5 3-7.5 7.5-7.5s7 2.5 7.5 7.5" />
+                  </svg>
+                </div>
+                <h2 class="display-title display-title--profile" id="profile-title">
+                  누구에게나 맞는
+                  <br>
+                  디자인을 합니다
+                </h2>
+                <p>ㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+              </div>
+            </article>
+            <div class="profile-details" aria-label="프로필 상세 정보">
+              <div class="info-card info-card--name">
+                <p>이름</p>
+                <strong>박승원</strong>
+              </div>
+              <div class="info-card info-card--email">
+                <p>이메일</p>
+                <a href="mailto:cyanworks@naver.com">cyanworks@naver.com</a>
+              </div>
+              <div class="info-card info-card--skills">
+                <p>기술</p>
+                <div class="skill-list">
+                  <span><img src="assets/images/adobe-ps.svg" draggable="false" alt="photoshop" title="포토샵" /></span>
+                  <span><img src="assets/images/adobe-ai.svg" draggable="false" alt="illustrator" title="일러스트레이터" /></span>
+                  <span><img src="assets/images/adobe-id.svg" draggable="false" alt="indesign" title="인디자인" /></span>
+                  <span><img src="assets/images/adobe-pr.svg" draggable="false" alt="premiere pro" title="프리미어" /></span>
+                  <span><img src="assets/images/adobe-ae.svg" draggable="false" alt="after effects" title="애프터이펙트" /></span>
+                  <span><img src="assets/images/figma.svg" draggable="false" alt="figma" title="피그마" /></span>
+                  <span><img src="assets/images/vscode.svg" draggable="false" alt="vscode" title="비주얼 스튜디오 코드" /></span>
+                  <span><img src="assets/images/html.svg" draggable="false" alt="html" title="HTML" /></span>
+                  <span><img src="assets/images/css.svg" draggable="false" alt="css" title="CSS" /></span>
+                  <span><img src="assets/images/js.svg" draggable="false" alt="javascript" title="자바스크립트" /></span>
+                </div>
+              </div>
+            </div>
+            <article class="journey-card">
+              <p class="journey-card__eyebrow">Journey</p>
+              <h2 class="display-title display-title--journey">노력과 과정들</h2>
+              <ol class="journey-list">
+                <li>
+                  <time datetime="2019">2019</time>
+                  <p>신라대학교 융합디자인학부 입학</p>
+                </li>
+                <li>
+                  <time datetime="2020">2020</time>
+                  <p>신라대학교 산업디자인학과 전공</p>
+                </li>
+                <li>
+                  <time datetime="2021">2021</time>
+                  <p>제16회 유니버설디자인공모전 "장애인특화 저상버스 시스템" 입상</p>
+                </li>
+                <li>
+                  <time datetime="2022">2022</time>
+                  <p>한국생산성본부 GTQ 일러스트 2급 자격증 취득</p>
+                </li>
+                <li>
+                  <time datetime="2023">2023</time>
+                  <p>신라대학교 졸업</p>
+                </li>
+                <li>
+                  <time datetime="2026">2026</time>
+                  <p>AI활용 UI/UX 반응형 웹, 브랜딩 프로젝트 제작 과정 수료</p>
+                </li>
+              </ol>
+            </article>
+          </div>
+        </section>
+        <section class="branding-section" id="branding" aria-labelledby="branding-title">
+          <div class="branding-shell">
+            <div class="section-controls" aria-label="브랜딩 섹션 제어">
+              <span class="glass-control glass-control--label">Branding</span>
+              <a class="glass-control glass-control--arrow" href="#team-projects" aria-label="프로젝트로 이동">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </a>
+              <a class="glass-control glass-control--arrow" href="#profile" aria-label="이전 섹션인 프로필로 이동">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m18 15-6-6-6 6" />
+                </svg>
+              </a>
+            </div>
+            <div class="branding-feature">
+              <figure class="branding-preview">
+                <img src="assets/images/bdio/main.webp" alt="배달.io 브랜딩 비주얼" loading="lazy" decoding="async" />
+              </figure>
+              <article class="branding-card">
+                <p class="branding-card__eyebrow">BRANDING SAMPLE</p>
+                <h2 class="display-title display-title--branding" id="branding-title">배달.io</h2>
+                <p>검색에서 주문까지, 웹으로 한 번에 해결한다는 콘셉트로 만들어진 샘플 브랜드 사이트입니다.</p>
+                <div class="branding-actions">
+                  <a href="https://cyanworks-git.github.io/baedalio/">
+                    Demo site
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://github.com/cyanworks-git/baedalio">
+                    Github
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="#" data-guidebook="baedalio" data-guidebook-label="배달.io 디자인 가이드북" data-guidebook-pages="19" aria-label="배달.io 디자인 가이드북 보기">
+                    Guide Book
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="resource-heading">
+              <h3>작업 리소스</h3>
+              <span>썸네일을 눌러 크게 보기</span>
+            </div>
+            <div class="resource-carousel">
+              <button class="resource-nav resource-nav--prev is-hidden" type="button" aria-label="이전 작업 리소스">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="resource-gallery" aria-label="브랜딩 작업 리소스">
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/logo.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/logo.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">로고</span>
+                  <span class="resource-card__meta">라이트 / 다크 모드 대응</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/mu1.webp" data-lightbox-alt="명함">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/mu1.webp" alt="명함 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">명함</span>
+                  <span class="resource-card__meta">홍보 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/mu2.webp" data-lightbox-alt="실외 입간판">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/mu2.webp" alt="입간판 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">입간판</span>
+                  <span class="resource-card__meta">식당 앞 비치 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/mu3.webp" data-lightbox-alt="실내 입간판">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/mu3.webp" alt="입간판 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">입간판</span>
+                  <span class="resource-card__meta">식당 내 비치 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/mu4.webp" data-lightbox-alt="홍보 포스터">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/mu4.webp" alt="포스터 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">포스터</span>
+                  <span class="resource-card__meta">홍보지 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/mu5.webp" data-lightbox-alt="QR 주문 안내판">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/mu5.webp" alt="QR 주문 안내판 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">QR 주문</span>
+                  <span class="resource-card__meta">안내판 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/mu6.webp" data-lightbox-alt="웹사이트 전시">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/mu6.webp" alt="웹사이트 전시 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">웹사이트 전시</span>
+                  <span class="resource-card__meta">PC · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/banner_time.webp" data-lightbox-alt="배너">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/banner_time.webp" alt="배너 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">배너</span>
+                  <span class="resource-card__meta">타임보드 배너 · 네이버 광고용</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/banner_rolling.webp" data-lightbox-alt="배너">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/banner_rolling.webp" alt="배너 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">배너</span>
+                  <span class="resource-card__meta">롤링보드 배너 · 네이버 광고용</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/bdio/banner_social.webp" data-lightbox-alt="배너">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/bdio/banner_social.webp" alt="배너 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">배너</span>
+                  <span class="resource-card__meta">소셜 배너 · 인스타그램용</span>
+                </button>
+              </div>
+              <button class="resource-nav resource-nav--next" type="button" aria-label="다음 작업 리소스">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="branding-section" id="team-projects" aria-labelledby="projects-title">
+          <div class="branding-shell">
+            <h2 class="visually-hidden" id="projects-title">프로젝트</h2>
+            <div class="section-controls" aria-label="프로젝트 섹션 제어">
+              <span class="glass-control glass-control--label">Projects</span>
+              <a class="glass-control glass-control--arrow" href="#works" aria-label="작업 목록으로 이동">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </a>
+              <a class="glass-control glass-control--arrow" href="#branding" aria-label="이전 섹션인 브랜딩으로 이동">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m18 15-6-6-6 6" />
+                </svg>
+              </a>
+            </div>
+            <div class="branding-feature">
+              <figure class="branding-preview img-location-fix">
+                <img src="assets/images/liquidmica.webp" alt="Liquid Mica Firefox 테마 화면" loading="lazy" decoding="async" />
+              </figure>
+              <article class="branding-card">
+                <p class="branding-card__eyebrow">FIREFOX USERCHROME CSS</p>
+                <h3 class="display-title display-title--branding" id="liquid-mica-title">Liquid Mica</h3>
+                <p>
+                  Windows에 적용되는 Mica 디자인 소재와 Apple의 모든 OS에 적용되는 Liquid Glass 디자인을 결합한 Windows 전용 Firefox
+                  테마입니다.<br>같은 엔진 브라우저인 Floorp에도 대응하며, 현재는 다크모드만 지원합니다.
+                </p>
+                <div class="branding-actions">
+                  <a href="https://github.com/cyanworks-git/liquidmica-userChrome">
+                    Github
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://firefoxcss-store.github.io/themes/liquid-mica">
+                    FirefoxCSS-Store
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="branding-feature">
+              <figure class="branding-preview">
+                <img src="assets/images/team1.webp" alt="UN평화축제 프로젝트 화면" loading="lazy" decoding="async" />
+              </figure>
+              <article class="branding-card">
+                <p class="branding-card__eyebrow">TEAM PROJECT</p>
+                <h3 class="display-title display-title--branding" id="un-peace-title">UN평화축제</h3>
+                <p>팀과 함께 기존 축제와 다른 이미지를 떠올려 하나의 새로운 아이디어로 만든 프로젝트입니다.</p>
+                <div class="branding-actions">
+                  <a href="https://cyanworks-git.github.io/unpeacefes/">
+                    Demo site
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://github.com/cyanworks-git/unpeacefes">
+                    Github
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="#" data-guidebook="unpeacefes" data-guidebook-label="UN평화축제 가이드북" data-guidebook-pages="25" aria-label="UN평화축제 가이드북 보기">
+                    Guide Book
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="resource-heading">
+              <h3>공동 작업 리소스</h3>
+              <span>썸네일을 눌러 크게 보기</span>
+            </div>
+            <div class="resource-carousel">
+              <button class="resource-nav resource-nav--prev is-hidden" type="button" aria-label="이전 작업 리소스">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="resource-gallery" aria-label="브랜딩 작업 리소스">
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/logo.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/logo.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">로고</span>
+                  <span class="resource-card__meta">심볼 및 텍스트 로고 바리에이션</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn1.webp" data-lightbox-alt="행사안내 카드뉴스 1/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn1.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 첫 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn2.webp" data-lightbox-alt="행사안내 카드뉴스 2/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn2.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 두 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn3.webp" data-lightbox-alt="행사안내 카드뉴스 3/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn3.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 세 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn4.webp" data-lightbox-alt="행사안내 카드뉴스 4/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn4.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 네 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn5.webp" data-lightbox-alt="행사안내 카드뉴스 5/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn5.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 다섯 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn6.webp" data-lightbox-alt="행사안내 카드뉴스 6/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn6.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 여섯 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn7.webp" data-lightbox-alt="행사안내 카드뉴스 7/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn7.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 일곱 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/cn8.webp" data-lightbox-alt="행사안내 카드뉴스 8/8">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/cn8.webp" alt="카드뉴스 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">행사안내 카드뉴스</span>
+                  <span class="resource-card__meta">8쪽 중 여덟 번째</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/videos/team1_pro.webm" data-lightbox-alt="롱폼용 홍보영상" data-lightbox-type="video">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/promotion.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                    <span class="works-file__play" aria-hidden="true">▶</span>
+                  </span>
+                  <span class="resource-card__label">홍보영상</span>
+                  <span class="resource-card__meta">롱폼용 · 생성형 AI 활용</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/videos/team1_shts.webm" data-lightbox-alt="쇼츠용 홍보영상" data-lightbox-type="video">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/shorts.webp" alt="홍보영상 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                    <span class="works-file__play" aria-hidden="true">▶</span>
+                  </span>
+                  <span class="resource-card__label">홍보영상</span>
+                  <span class="resource-card__meta">숏폼용 · 생성형 AI 활용</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu1.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu1.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">홍보물</span>
+                  <span class="resource-card__meta">버스 정류장 부착 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu2.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu2.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">홍보 현수막</span>
+                  <span class="resource-card__meta">가로등 현수막 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu3.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu3.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">축제 안내</span>
+                  <span class="resource-card__meta">축제 안내 팜플렛 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu4.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu4.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">스태프 조끼</span>
+                  <span class="resource-card__meta">축제 사무국 복장 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu5.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu5.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">스태프 티셔츠 &amp; 운영 재킷</span>
+                  <span class="resource-card__meta">축제 사무국 복장 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu6.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu6.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">유광 종이가방</span>
+                  <span class="resource-card__meta">축제 기념품 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu7.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu7.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">손목밴드</span>
+                  <span class="resource-card__meta">축제 기념품 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu8.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu8.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">에코백</span>
+                  <span class="resource-card__meta">축제 기념품 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu9.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu9.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">머그컵</span>
+                  <span class="resource-card__meta">축제 기념품 · 목업</span>
+                </button>
+                <button class="resource-card" type="button" data-lightbox-src="assets/images/team1/mu10.webp" data-lightbox-alt="로고">
+                  <span class="resource-card__image">
+                    <img src="assets/images/thumbnails/team1/mu10.webp" alt="로고 미리보기" width="460" height="460" loading="lazy" decoding="async" />
+                  </span>
+                  <span class="resource-card__label">반응형 웹사이트 전시</span>
+                  <span class="resource-card__meta">기기별 전시 · 목업</span>
+                </button>
+              </div>
+              <button class="resource-nav resource-nav--next" type="button" aria-label="다음 작업 리소스">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="works-section" id="works" aria-labelledby="works-title">
+          <div class="works-shell">
+            <div class="section-controls" aria-label="기타 작업 섹션 제어">
+              <span class="glass-control glass-control--label">Other Works</span>
+              <a class="glass-control glass-control--arrow" href="#contact" aria-label="연락처로 이동">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </a>
+              <a class="glass-control glass-control--arrow" href="#team-projects" aria-label="이전 섹션인 프로젝트로 이동">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m18 15-6-6-6 6" />
+                </svg>
+              </a>
+            </div>
+            <div class="works-layout">
+              <header class="works-intro">
+                <h2 class="display-title display-title--works" id="works-title">
+                  그 외의 작업들을<br>모았습니다.
+                </h2>
+                <p>브랜딩 외에도 다양한 매체를 관찰하고 실험하며 시각적 가능성을 넓혀갑니다.</p>
+              </header>
+              <div class="works-explorer">
+                <div class="works-file-area">
+                  <div class="works-file-grid" id="works-panel" role="tabpanel" aria-labelledby="works-tab-photo" tabindex="0">
+                    <button class="works-file" type="button" data-works-type="photo" data-lightbox-src="assets/images/modookey.webp" data-lightbox-alt="모두키 졸업 작품 포스터">
+                      <span class="works-file__thumb">
+                        <img src="assets/images/thumbnails/modookey.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                      </span>
+                      <span class="works-file__title">모두키</span>
+                      <span class="works-file__meta">졸업 작품 · 제품 콘셉트</span>
+                    </button>
+                    <button class="works-file" type="button" data-works-type="photo" data-lightbox-src="assets/images/jobsphillosophy.webp" data-lightbox-alt="스티브 잡스의 머릿속 철학 인포그래픽">
+                      <span class="works-file__thumb">
+                        <img src="assets/images/thumbnails/jobsphillosophy.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                      </span>
+                      <span class="works-file__title">스티브 잡스의 머릿속 철학</span>
+                      <span class="works-file__meta">일러스트 · 인포그래픽</span>
+                    </button>
+                    <button class="works-file" type="button" data-works-type="photo" data-lightbox-src="assets/images/bussys.webp" data-lightbox-alt="장애인특화 저상버스 시스템">
+                      <span class="works-file__thumb">
+                        <img src="assets/images/thumbnails/bussys.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                      </span>
+                      <span class="works-file__title">장애인특화 저상버스 시스템</span>
+                      <span class="works-file__meta">제16회 유니버설디자인 공모전 입상작</span>
+                    </button>
+                    <button class="works-file" type="button" data-works-type="photo" data-lightbox-src="assets/images/typo1.webp" data-lightbox-alt="근엄고딕 콘셉트">
+                      <span class="works-file__thumb">
+                        <img src="assets/images/thumbnails/typo1.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                      </span>
+                      <span class="works-file__title">근엄고딕</span>
+                      <span class="works-file__meta">타이포그래피 · 글꼴 콘셉트</span>
+                    </button>
+                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/hero-visual.png" data-lightbox-alt="Motion sample 01">
+                      <span class="works-file__thumb">
+                        <img src="assets/images/thumbnails/hero-visual-460.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                        <span class="works-file__play">▶</span>
+                      </span>
+                      <span class="works-file__title">Motion sample 01</span>
+                      <span class="works-file__meta">동영상 작업 · 모션 그래픽</span>
+                    </button>
+                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/hero-visual.png" data-lightbox-alt="Interface motion">
+                      <span class="works-file__thumb">
+                        <img src="assets/images/thumbnails/hero-visual-460.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                        <span class="works-file__play">▶</span>
+                      </span>
+                      <span class="works-file__title">Interface motion</span>
+                      <span class="works-file__meta">동영상 작업 · 인터랙션</span>
+                    </button>
+                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/hero-visual.png" data-lightbox-alt="Short film cut">
+                      <span class="works-file__thumb">
+                        <img src="assets/images/thumbnails/hero-visual-460.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                        <span class="works-file__play">▶</span>
+                      </span>
+                      <span class="works-file__title">Short film cut</span>
+                      <span class="works-file__meta">동영상 작업 · 영상 편집</span>
+                    </button>
+                  </div>
+                  <div class="works-tabs works-tabs--photo" role="tablist" aria-label="작업 유형 선택">
+                    <button class="is-active" id="works-tab-photo" type="button" role="tab" aria-controls="works-panel" aria-selected="true" data-works-tab="photo">
+                      <svg class="works-tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                        <circle cx="8.5" cy="9" r="1.5" />
+                        <path d="m4 18 5-5 3.5 3.5 2.5-2.5L20 18" />
+                      </svg>
+                      <span class="works-tab__label">사진</span>
+                    </button>
+                    <button id="works-tab-video" type="button" role="tab" aria-controls="works-panel" aria-selected="false" data-works-tab="video" tabindex="-1">
+                      <svg class="works-tab__icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="4" y="3" width="16" height="18" rx="2" />
+                        <path d="M8 3v18M16 3v18M4 8h4m8 0h4M4 16h4m8 0h4" />
+                      </svg>
+                      <span class="works-tab__label">동영상</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="contact-footer" id="contact" aria-labelledby="contact-title">
+      <div class="contact-footer__main">
+        <div class="contact-footer__message">
+          <h2 id="contact-title">
+            함께할<br>준비가<br>되어<br>있습니다.
+          </h2>
+        </div>
+        <div class="contact-footer__details">
+          <p class="contact-footer__invite">언제든 연락주세요!</p>
+          <div class="contact-footer__links">
+            <div class="contact-link">
+              <span class="contact-link__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m4 7 8 6 8-6" />
+                </svg>
+              </span>
+              <a class="glass-control contact-link__label" href="mailto:cyanworks@naver.com">cyanworks@naver.com</a>
+            </div>
+            <div class="contact-link">
+              <span class="contact-link__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 22v-2a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.2a5.6 5.6 0 0 0-1.5-3.9A5.2 5.2 0 0 0 19.2 2S18 1.6 15 3.6a14 14 0 0 0-6 0C6 1.6 4.8 2 4.8 2a5.2 5.2 0 0 0-.1 3.4 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.5 6.8 6.8 7.2A4.8 4.8 0 0 0 9 20v2" />
+                  <path d="M9 18c-3 .9-3-1.5-4.2-1.8" />
+                </svg>
+              </span>
+              <a class="glass-control contact-link__label" href="https://github.com/cyanworks-git" target="_blank" rel="noopener noreferrer">
+                cyanworks-git
+              </a>
+            </div>
+            <div class="contact-link">
+              <span class="contact-link__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8v.5Z" />
+                </svg>
+              </span>
+              <a class="glass-control contact-link__label" href="https://open.kakao.com/o/sLNmGbOi" target="_blank" rel="noopener noreferrer">
+                @cyanworks
+              </a>
+            </div>
+            <div class="contact-link">
+              <span class="contact-link__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m22 2-7 20-4-9-9-4Z" />
+                  <path d="M22 2 11 13" />
+                </svg>
+              </span>
+              <a class="glass-control contact-link__label" href="https://t.me/cyanworks" target="_blank" rel="noopener noreferrer">
+                @cyanworks
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-footer__bottom">
+        <p class="contact-footer__credit">
+          Designed &amp; developed by<br>© cyanworks.
+        </p>
+        <p class="contact-footer__location">live in Busan.</p>
+        <a class="glass-control glass-control--arrow contact-footer__top" href="#top" aria-label="최상단으로 이동">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 11 6-6 6 6" />
+            <path d="m6 19 6-6 6 6" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-hidden="true">
+      <div class="lightbox__frame">
+        <h2 class="lightbox__title" id="lightbox-title"></h2>
+        <div class="lightbox__viewport">
+          <img alt="" draggable="false" />
+          <video class="lightbox__video" controls autoplay playsinline preload="metadata"></video>
+          <button class="lightbox__fullscreen" type="button" aria-label="전체화면 보기"><span aria-hidden="true">↗</span> 전체화면 보기</button>
+          <div class="lightbox__fullscreen-controls" aria-label="가이드북 페이지 제어">
+            <button class="lightbox__fullscreen-nav lightbox__fullscreen-nav--prev" type="button" aria-label="이전 페이지" title="이전 페이지"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+            <span class="lightbox__fullscreen-page" aria-live="polite">1 / 1</span>
+            <button class="lightbox__fullscreen-close" type="button" aria-label="전체화면 닫기" title="전체화면 닫기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button>
+            <button class="lightbox__fullscreen-nav lightbox__fullscreen-nav--next" type="button" aria-label="다음 페이지" title="다음 페이지"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></button>
+          </div>
+          <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="이전 작업 리소스">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="다음 작업 리소스">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+          <button class="lightbox__close" type="button" aria-label="미디어 닫기">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+        <p class="lightbox__hint lightbox__hint--desktop">
+          Ctrl / CMD + 마우스 휠로 확대/축소해서 볼 수 있습니다
+          <small>확대 후 드래그로 이동이 가능합니다.</small>
+        </p>
+        <p class="lightbox__hint lightbox__hint--touch">
+          좌우로 밀어 이전·다음 사진을 볼 수 있습니다
+          <small>두 손가락으로 확대/축소할 수 있습니다.</small>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
