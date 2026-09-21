@@ -37,6 +37,7 @@ let lightboxPinchStart = null;
 let lightboxRequestId = 0;
 let lightboxGroup = [];
 let lightboxIndex = -1;
+let lightboxDisplayedIndex = -1;
 let lightboxReturnFocus = null;
 let lightboxMode = 'image';
 let lightboxControlsHideTimer = null;
@@ -154,16 +155,39 @@ resourceCarousels.forEach((carousel) => {
     previous.classList.toggle('is-hidden', atStart);
     next.classList.toggle('is-hidden', atEnd);
   };
-  previous.addEventListener('click', () =>
-    gallery.scrollBy({
-      left: -(gallery.clientWidth * 0.78),
+  const scrollByPage = (direction) => {
+    const firstCard = gallery.querySelector('.resource-card');
+    if (!firstCard) return;
+    const gap =
+      Number.parseFloat(window.getComputedStyle(gallery).columnGap) || 0;
+    const cardStep = firstCard.getBoundingClientRect().width + gap;
+    const cardsPerPage = Math.max(
+      1,
+      Math.floor(gallery.clientWidth / cardStep),
+    );
+    const pageWidth = cardsPerPage * cardStep;
+    const page = Math.round(gallery.scrollLeft / pageWidth) + direction;
+    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+    gallery.scrollTo({
+      left: Math.min(maxScroll, Math.max(0, page * pageWidth)),
       behavior: 'smooth',
-    }),
-  );
-  next.addEventListener('click', () =>
-    gallery.scrollBy({ left: gallery.clientWidth * 0.78, behavior: 'smooth' }),
-  );
+    });
+  };
+  const handleWheel = (event) => {
+    if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+    const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+    const nextScroll = Math.min(
+      maxScroll,
+      Math.max(0, gallery.scrollLeft + event.deltaY),
+    );
+    if (nextScroll === gallery.scrollLeft) return;
+    event.preventDefault();
+    gallery.scrollLeft = nextScroll;
+  };
+  previous.addEventListener('click', () => scrollByPage(-1));
+  next.addEventListener('click', () => scrollByPage(1));
   gallery.addEventListener('scroll', updateControls, { passive: true });
+  gallery.addEventListener('wheel', handleWheel, { passive: false });
   window.addEventListener('resize', updateControls);
   updateControls();
 });
@@ -269,9 +293,11 @@ function handleNativeFullscreenChange() {
 
 function updateFullscreenControls() {
   if (lightboxFullscreenPage) {
+    const displayedIndex =
+      lightboxDisplayedIndex >= 0 ? lightboxDisplayedIndex : lightboxIndex;
     lightboxFullscreenPage.textContent =
       lightboxMode === 'guidebook'
-        ? `${lightboxIndex + 1} / ${lightboxGroup.length}`
+        ? `${displayedIndex + 1} / ${lightboxGroup.length}`
         : '';
   }
   if (lightboxFullscreenPrevious) {
@@ -392,6 +418,7 @@ function closeLightbox() {
   lightboxPan.y = 0;
   lightboxGroup = [];
   lightboxIndex = -1;
+  lightboxDisplayedIndex = -1;
   lightboxMode = 'image';
   updateFullscreenButton();
   updateFullscreenControls();
@@ -615,6 +642,20 @@ function updateLightboxNavigation() {
   updateFullscreenControls();
 }
 
+function commitLightboxContent(contentLabel, source) {
+  if (!lightboxImage) return;
+  lightboxDisplayedIndex = lightboxIndex;
+  lightboxImage.alt = contentLabel;
+  if (lightboxTitle) {
+    lightboxTitle.textContent =
+      lightboxMode === 'guidebook'
+        ? `${lightboxIndex + 1} / ${lightboxGroup.length}`
+        : contentLabel;
+  }
+  updateFullscreenControls();
+  if (source) lightboxImage.src = source;
+}
+
 function showLightboxCard(card) {
   if (!lightbox || !lightboxImage || !lightboxVideo) return;
   const originalSrc = card?.dataset.lightboxSrc;
@@ -631,13 +672,6 @@ function showLightboxCard(card) {
       : '';
   const contentLabel = card.dataset.lightboxAlt || '';
 
-  lightboxImage.alt = contentLabel;
-  if (lightboxTitle) {
-    lightboxTitle.textContent =
-      lightboxMode === 'guidebook'
-        ? `${lightboxIndex + 1} / ${lightboxGroup.length}`
-        : contentLabel;
-  }
   updateFullscreenControls();
   lightbox.classList.add('is-open', 'is-loading');
   lightbox.classList.remove('is-zoomed', 'is-panning');
@@ -651,6 +685,7 @@ function showLightboxCard(card) {
   lightboxPan.y = 0;
   lightboxImage.style.transform = '';
   if (!keepCurrentImage) {
+    lightboxImage.alt = '';
     lightboxImage.classList.remove('is-ready');
     lightboxImage.removeAttribute('src');
     if (previewSrc) {
@@ -669,6 +704,7 @@ function showLightboxCard(card) {
         !lightbox.classList.contains('is-open')
       )
         return;
+      commitLightboxContent(contentLabel);
       lightboxVideo.classList.add('is-ready');
       lightbox.classList.remove('is-loading');
       lightboxVideo.play().catch(() => {});
@@ -686,19 +722,24 @@ function showLightboxCard(card) {
   const preload = new Image();
   preload.decoding = 'async';
   if (lightboxLoadedImages.has(originalSrc)) {
-    lightboxImage.src = originalSrc;
+    commitLightboxContent(contentLabel, originalSrc);
     lightboxImage.classList.add('is-ready');
     lightbox.classList.remove('is-loading');
     return;
   }
-  preload.onload = () => {
+  preload.onload = async () => {
+    try {
+      if (preload.decode) await preload.decode();
+    } catch {
+      // The load event is still a valid fallback when decoding is unavailable.
+    }
     lightboxLoadedImages.add(originalSrc);
     if (
       requestId !== lightboxRequestId ||
       !lightbox.classList.contains('is-open')
     )
       return;
-    lightboxImage.src = originalSrc;
+    commitLightboxContent(contentLabel, originalSrc);
     lightboxImage.classList.add('is-ready');
     lightbox.classList.remove('is-loading');
   };

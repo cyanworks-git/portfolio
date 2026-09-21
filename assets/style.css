@@ -82,13 +82,29 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 0;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 body {
+  position: relative;
   margin: 0;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font);
   font-synthesis: none;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
+body::before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  height: env(safe-area-inset-top);
+  background: #063e42;
+  content: '';
+  pointer-events: none;
 }
 a {
   color: inherit;
@@ -858,12 +874,17 @@ body:has(.hero-intro.is-active) .dock-header {
   display: flex;
   gap: 12px;
   overflow-x: auto;
+  min-width: 0;
+  max-width: 100%;
   padding: 18px;
   border: 0;
   border-radius: 30px;
   background: rgb(178 235 242 / 72%);
   scrollbar-width: none;
   scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
 }
 .resource-gallery::-webkit-scrollbar {
   display: none;
@@ -900,6 +921,7 @@ body:has(.hero-intro.is-active) .dock-header {
 }
 .resource-card__label {
   display: block;
+  min-height: 1.25em;
   margin: 10px 4px 3px;
   overflow: hidden;
   color: #073f43;
@@ -912,8 +934,10 @@ body:has(.hero-intro.is-active) .dock-header {
   white-space: nowrap;
 }
 .resource-card__meta {
-  display: block;
+  display: -webkit-box;
+  min-height: calc(1.25em * 2);
   margin: 0 4px;
+  overflow: hidden;
   color: #317b80;
   font-family: inherit;
   font-size: 12px;
@@ -921,6 +945,8 @@ body:has(.hero-intro.is-active) .dock-header {
   line-height: 1.25;
   letter-spacing: -0.015em;
   text-transform: none;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .resource-nav {
   position: absolute;
@@ -1058,7 +1084,6 @@ body:has(.hero-intro.is-active) .dock-header {
 .lightbox__fullscreen {
   position: absolute;
   right: auto;
-  left: 50%;
   bottom: max(16px, calc(16px + env(safe-area-inset-bottom)));
   z-index: 2;
   display: none;
@@ -1075,6 +1100,8 @@ body:has(.hero-intro.is-active) .dock-header {
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
+  left: 50%;
+  margin: 0;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -1472,9 +1499,23 @@ body:has(.hero-intro.is-active) .dock-header {
     display: none;
   }
   .lightbox.is-guidebook .lightbox__fullscreen {
+    position: fixed;
+    right: auto;
+    bottom: max(16px, calc(16px + env(safe-area-inset-bottom)));
+    left: 50%;
+    z-index: 5;
+    margin: 0;
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 641px) and (max-width: 1100px),
+  (min-width: 641px) and (hover: none) and (pointer: coarse) {
+  .lightbox:not(.is-zoomed):not(:fullscreen):not(.is-fullscreen-fallback)
+    .lightbox__frame {
+    top: -28px;
   }
 }
 @media (max-width: 640px) {
@@ -2346,7 +2387,8 @@ body:has(.hero-intro.is-active) .dock-header {
     grid-template-rows: auto;
     gap: 54px;
     min-height: 0;
-    margin-inline: -20px;
+    width: 100%;
+    margin-inline: 0;
     padding: 72px 20px 32px;
   }
   .contact-footer__main {
@@ -2431,7 +2473,7 @@ body:has(.hero-intro.is-active) .dock-header {
     border-radius: 24px;
   }
   .resource-card {
-    flex-basis: min(72vw, 220px);
+    flex-basis: min(180px, calc((100% - 24px) / 3));
   }
   .resource-nav--prev {
     left: 12px;
