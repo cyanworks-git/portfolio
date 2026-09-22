@@ -54,6 +54,11 @@ const worksPanel = document.querySelector('#works-panel');
 const hero = document.querySelector('.hero');
 const heroIntro = document.querySelector('[data-hero-intro]');
 const heroLogo = document.querySelector('[data-hero-logo]');
+document.querySelectorAll('[data-profile-image]').forEach((image) => {
+  const removeOnError = () => image.remove();
+  image.addEventListener('error', removeOnError, { once: true });
+  if (image.complete && image.naturalWidth === 0) removeOnError();
+});
 
 function updateHeaders() {
   const firstSection = document.querySelector('#profile');
