@@ -2,21 +2,21 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#063E42">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="a design portfolio page">
-    <title>cyanworks | a design portfolio page</title>
-    <link rel="stylesheet" href="assets/style.css?v=20260918-38">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#063E42" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <script src="assets/script.js?v=20260918-38" defer></script>
+    <meta name="description" content="a design portfolio page" />
+    <title>cyanworks | a design portfolio page</title>
+    <link rel="stylesheet" href="assets/style.css?v=20260922-01" />
+    <script src="assets/script.js?v=20260921-39" defer></script>
   </head>
 
   <body>
-    <a class="skip-link" href="#main-content">본문 바로가기</a>
+    <a class="skip-link" href="#main-content">본문으로</a>
     <header class="site-header">
       <div class="dock-header is-visible" aria-hidden="false">
-        <nav class="dock-nav" aria-label="메인 비주얼 포트폴리오 섹션">
+        <nav class="dock-nav" aria-label="메인 포트폴리오 섹션">
           <a class="dock-nav__item" href="#profile">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="8" r="3.5" />
@@ -33,22 +33,22 @@
           </a>
           <a class="dock-nav__item" href="#team-projects">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="8" cy="8" r="3">
-              <circle cx="17" cy="9" r="2.5">
-              <path d="M2.5 20c.4-4 2.2-6 5.5-6s5.1 2 5.5 6M14 15c3.8-.9 6.3.8 6.7 4.6">
+              <circle cx="8" cy="8" r="3" />
+              <circle cx="17" cy="9" r="2.5" />
+              <path d="M2.5 20c.4-4 2.2-6 5.5-6s5.1 2 5.5 6M14 15c3.8-.9 6.3.8 6.7 4.6" />
             </svg>
             <span>프로젝트</span>
           </a>
           <a class="dock-nav__item" href="#works">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="4" y="5" width="16" height="15" rx="2">
-              <path d="M8 5V3h8v2M8 10h8M8 14h5">
+              <rect x="4" y="5" width="16" height="15" rx="2" />
+              <path d="M8 5V3h8v2M8 10h8M8 14h5" />
             </svg>
             <span>기타 작업</span>
           </a>
           <a class="dock-nav__item" href="#contact">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
               <path d="m4 7 8 6 8-6" />
             </svg>
             <span>연락처</span>
@@ -57,17 +57,17 @@
       </div>
 
       <div class="top-header is-hidden" aria-hidden="true">
-        <a class="site-signature" href="#top" aria-label="처음으로 이동">
-          <img class="site-signature__logo" src="assets/images/logo.svg" alt="">
+        <a class="site-signature" href="#top" aria-label="처음으로">
+          <img class="site-signature__logo" src="assets/images/logo.svg" alt="" />
         </a>
-        <nav class="top-nav" aria-label="포트폴리오 섹션">
+        <nav class="top-nav" aria-label="포트폴리오">
           <a href="#profile">프로필</a>
           <a href="#branding">브랜딩</a>
           <a href="#team-projects">프로젝트</a>
           <a href="#works">기타 작업</a>
           <a href="#contact">연락처</a>
         </nav>
-        <button class="mobile-menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
+        <button class="mobile-menu-toggle" type="button" aria-label="메뉴" aria-expanded="false" aria-controls="mobile-menu">
           <span class="mobile-menu-toggle__mark" aria-hidden="true">
             <span></span>
             <span></span>
@@ -133,8 +133,8 @@
           </svg>
         </h1>
         <a class="scroll-cue" href="#profile">
-          <span>Scroll</span>
-          <span class="scroll-cue__arrow" aria-hidden="true">v</span>
+          <span>스크롤하여 자세히 보기</span>
+          <span class="scroll-cue__arrow" aria-hidden="true">▼</span>
         </a>
       </section>
 
@@ -152,7 +152,8 @@
               </div>
               <div class="profile-card__body">
                 <div class="profile-avatar" aria-label="프로필 이미지 자리">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <img class="profile-avatar__image" src="assets/images/profile.png" alt="프로필 사진" data-profile-image>
+                  <svg class="profile-avatar__fallback" viewBox="0 0 24 24" aria-hidden="true">
                     <circle cx="12" cy="8" r="4" />
                     <path d="M4.5 21c.5-5 3-7.5 7.5-7.5s7 2.5 7.5 7.5" />
                   </svg>
@@ -162,7 +163,9 @@
                   <br>
                   디자인을 합니다
                 </h2>
-                <p>사용자와 시선과 행동을 고려하여 직관적이고 일관된 웹 경험을 디자인합니다.</p>
+                <p>
+                  사용자와 시선과 행동을 고려하여 직관적이고 일관된 웹 경험을 디자인합니다. 다양한 사용자의 입장에서 생각하며, 누구나 어렵지 않게 이해하고 사용할 수 있는 디자인을 고민하여 사용자와 서비스가 자연스럽게 스며드는 경험을 만들어갑니다.
+                </p>
               </div>
             </article>
             <div class="profile-details" aria-label="프로필 상세 정보">
@@ -636,25 +639,25 @@
                       <span class="works-file__title">근엄고딕</span>
                       <span class="works-file__meta">타이포그래피 · 글꼴 콘셉트</span>
                     </button>
-                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/hero-visual.png" data-lightbox-alt="Motion sample 01">
+                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/ready.webp" data-lightbox-alt="Motion sample 01">
                       <span class="works-file__thumb">
-                        <img src="assets/images/thumbnails/hero-visual-460.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                        <img src="assets/images/thumbnails/ready.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
                         <span class="works-file__play">▶</span>
                       </span>
                       <span class="works-file__title">Motion sample 01</span>
                       <span class="works-file__meta">동영상 작업 · 모션 그래픽</span>
                     </button>
-                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/hero-visual.png" data-lightbox-alt="Interface motion">
+                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/ready.webp" data-lightbox-alt="Interface motion">
                       <span class="works-file__thumb">
-                        <img src="assets/images/thumbnails/hero-visual-460.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                        <img src="assets/images/thumbnails/ready.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
                         <span class="works-file__play">▶</span>
                       </span>
                       <span class="works-file__title">Interface motion</span>
                       <span class="works-file__meta">동영상 작업 · 인터랙션</span>
                     </button>
-                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/hero-visual.png" data-lightbox-alt="Short film cut">
+                    <button class="works-file" type="button" data-works-type="video" data-lightbox-src="assets/images/ready.webp" data-lightbox-alt="Short film cut">
                       <span class="works-file__thumb">
-                        <img src="assets/images/thumbnails/hero-visual-460.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
+                        <img src="assets/images/thumbnails/ready.webp" alt="" width="460" height="460" loading="lazy" decoding="async" />
                         <span class="works-file__play">▶</span>
                       </span>
                       <span class="works-file__title">Short film cut</span>
@@ -698,18 +701,17 @@
           <div class="contact-footer__links">
             <div class="contact-link">
               <span class="contact-link__icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <path d="m4 7 8 6 8-6" />
+                <svg viewBox="0 0 55.24 41.67" aria-hidden="true">
+                  <path d="M24.54,21.82L.9,4.94c-.39-.28-.9.03-.9.54v30.93c0,2.9,2.14,5.26,4.77,5.26h45.7c2.64,0,4.77-2.35,4.77-5.26V5.48c0-.51-.51-.82-.9-.54l-23.64,16.88c-1.87,1.34-4.29,1.34-6.16,0Z"/>
+                  <path d="M53.31,0H1.94c-.57,0-.79.82-.31,1.16l22.6,16.14c2.06,1.47,4.72,1.47,6.78,0L53.62,1.16c.48-.34.26-1.16-.31-1.16Z"/>
                 </svg>
               </span>
               <a class="glass-control contact-link__label" href="mailto:cyanworks@naver.com">cyanworks@naver.com</a>
             </div>
             <div class="contact-link">
               <span class="contact-link__icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M15 22v-2a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.2a5.6 5.6 0 0 0-1.5-3.9A5.2 5.2 0 0 0 19.2 2S18 1.6 15 3.6a14 14 0 0 0-6 0C6 1.6 4.8 2 4.8 2a5.2 5.2 0 0 0-.1 3.4 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.5 6.8 6.8 7.2A4.8 4.8 0 0 0 9 20v2" />
-                  <path d="M9 18c-3 .9-3-1.5-4.2-1.8" />
+                <svg viewBox="0 0 51.91 70.08" aria-hidden="true">
+                  <path d="M47.83,12.45c.13-3.77.21-11.43-1.31-12.34-1.36-.82-5.11,3.26-7.41,6.01-2.05-.74-4.24-1.16-6.54-1.16h-5.66c-2.3,0-4.49.42-6.54,1.16C18.06,3.37,14.31-.71,12.94.11c-1.52.91-1.44,8.57-1.31,12.34-2.55,3.28-4.08,7.39-4.08,11.86h0c0,9.16,6.37,16.82,14.92,18.82-2.52,1.97-4.14,5.04-4.14,8.48-.01,1.72-1.41,3.1-3.13,3.1-2.26,0-4.35-1.18-5.53-3.11l-3.89-6.41c-.58-.96-1.62-1.54-2.74-1.54h-1.68c-.76,0-1.37.62-1.37,1.37,0,.62.42,1.17,1.02,1.33,1.57.42,2.86,1.55,3.49,3.05l2.86,6.81c1.09,2.6,3.64,4.3,6.46,4.3h1.25c1.18,0,2.31-.45,3.16-1.26l.1-.09v10.92h21.57v-18.47c0-3.33-1.51-6.3-3.88-8.28,9.03-1.64,15.88-9.52,15.88-19.02h0c0-4.48-1.53-8.58-4.08-11.86Z"/>
                 </svg>
               </span>
               <a class="glass-control contact-link__label" href="https://github.com/cyanworks-git" target="_blank" rel="noopener noreferrer">
@@ -718,8 +720,8 @@
             </div>
             <div class="contact-link">
               <span class="contact-link__icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6A8.4 8.4 0 0 1 12.5 3h.5a8.5 8.5 0 0 1 8 8v.5Z" />
+                <svg viewBox="0 0 57.38 48.69" aria-hidden="true">
+                  <path d="M28.69,0C12.84,0,0,9.75,0,21.77c0,7.45,4.93,14.02,12.45,17.94l-2.86,8.27c-.16.47.36.89.78.63l9.74-6.07c2.71.64,5.59.99,8.58.99,15.84,0,28.69-9.75,28.69-21.77S44.53,0,28.69,0Z"/>
                 </svg>
               </span>
               <a class="glass-control contact-link__label" href="https://open.kakao.com/o/sLNmGbOi" target="_blank" rel="noopener noreferrer">
@@ -728,9 +730,9 @@
             </div>
             <div class="contact-link">
               <span class="contact-link__icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="m22 2-7 20-4-9-9-4Z" />
-                  <path d="M22 2 11 13" />
+                <svg viewBox="0 0 56.77 56.77" aria-hidden="true">
+                  <path d="M.66,25.19L55.31.05c.47-.22.88.4.5.75L20.62,33.34.8,27.29c-.99-.3-1.08-1.67-.14-2.1Z"/>
+                  <path d="M31.58,56.11L56.72,1.45c.22-.47-.4-.88-.75-.5L23.43,36.15l6.05,19.82c.3.99,1.67,1.08,2.1.14Z"/>
                 </svg>
               </span>
               <a class="glass-control contact-link__label" href="https://t.me/cyanworks" target="_blank" rel="noopener noreferrer">
